@@ -1,0 +1,31 @@
+.proyectos {
+  padding: 4rem 0;
+}
+
+.separatorAndHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 4rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  list-style-type: none;
+  padding: 1rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 1rem;
+  }
+}

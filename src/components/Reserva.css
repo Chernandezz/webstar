@@ -1,0 +1,125 @@
+.home {
+  position: relative; /* Agrega posición relativa al contenedor */
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home::before {
+  /* Crea un pseudo-elemento para el fondo */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Usar gradient en lugar de un color sólido */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/home-bg.webp") no-repeat center center / cover;
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+.home .principal {
+  transform: translate(0px, -10rem);
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 50rem;
+  backdrop-filter: blur(0.4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.home .principal img {
+  max-width: 10rem;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.home .principal h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.principal {
+  transform: translate(0px, -10rem);
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 50rem;
+  backdrop-filter: blur(0.4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.principal img {
+  max-width: 10rem;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.principal h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  gap: 4rem;
+  transform: translate(0px, -7rem);
+}
+
+.social a i {
+  color: white;
+  font-size: 2rem;
+}
+
+.btn {
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1.2rem 3rem;
+  background: var(--main-color);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  font-size: 1.8rem;
+  transition: 0.2s linear;
+}
+
+.btn:hover {
+  background: var(--light-purple);
+  color: var(--white);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .home .principal {
+    width: 90%; /* Reduce el tamaño de la caja en pantallas pequeñas */
+  }
+
+  .home .principal img {
+    max-width: 7rem; /* Reduce el tamaño del logo */
+  }
+
+  .home .principal h3 {
+    font-size: 2rem; /* Reduce el tamaño de la fuente */
+  }
+
+  .btn {
+    padding: 1rem 2rem; /* Reduce el padding del botón */
+    font-size: 1.5rem; /* Reduce el tamaño de la fuente del botón */
+  }
+}

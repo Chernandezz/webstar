@@ -1,0 +1,97 @@
+.header {
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, transparent, var(--black));
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* added transition */
+}
+
+.header.solid {
+  background: var(--black);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* added box-shadow for a slightly lifted appearance */
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+.header .navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header .navbar a {
+  font-size: 1.8rem;
+  color: var(--light-white);
+  transition: 0.2s linear;
+}
+
+.header .navbar a:hover {
+  color: var(--white);
+}
+
+.header .divider {
+  color: var(--light-white);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+}
+
+#menu-btn i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(
+      --background-color
+    ); /* replace with the appropriate color */
+    padding: 2rem;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 999;
+  }
+
+  .header .navbar.open {
+    max-height: 500px; /* adjust as needed */
+    opacity: 1;
+  }
+
+  .header .navbar a {
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  .header .divider {
+    display: none;
+  }
+}
