@@ -1,0 +1,16 @@
+.sobre-mi {
+  width: 100%;
+  padding: 50px 0;
+  color: var(--white);
+  background: var(--black);
+}
+
+.sobre-mi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.sobre-mi p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}

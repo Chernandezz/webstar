@@ -98,7 +98,7 @@ const Proyectos = () => {
     <div className="proyectos">
       <div className="separatorAndHeader">
         <h2 className="heading" id="proyectos">
-          Proyectos
+          Servicios
         </h2>
       </div>
       <ul className="cards">

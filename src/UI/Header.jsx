@@ -27,10 +27,10 @@ const Header = () => {
       data-aos="fade-down"
     >
       <a href="#main" className="logo">
-        Profayra
+        Webgeniuslab
       </a>
 
-      <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+      {/* <nav className={`navbar ${menuOpen ? "open" : ""}`}>
         <a href="https://wa.link/vags6s" target="_blank">
           Contacto
         </a>
@@ -42,7 +42,7 @@ const Header = () => {
 
       <div id="menu-btn" onClick={handleMenuClick}>
         <i className={`fas ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
-      </div>
+      </div> */}
     </header>
   );
 };

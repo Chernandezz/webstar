@@ -1,15 +1,21 @@
 import { useState } from "react";
 import Header from "./UI/Header";
-import Reserva from "./components/Reserva";
 import Proyectos from "./components/Proyectos";
+import SobreMi from "./components/SobreMi";
+// import Habilidades from "./components/Habilidades";
+// import Contacto from "./components/Contacto";
+// import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Header />
-      <Reserva />
+      {/* <SobreMi /> */}
+      {/* <Habilidades /> */}
       <Proyectos />
+      {/* <Contacto />
+      <Footer /> */}
     </>
   );
 }
